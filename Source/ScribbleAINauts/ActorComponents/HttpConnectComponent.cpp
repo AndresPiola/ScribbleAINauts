@@ -4,6 +4,7 @@
 #include "HttpConnectComponent.h"
 
 #include "HttpModule.h"
+#include "GenericPlatform/GenericPlatformHttp.h"
 #include "Interfaces/IHttpResponse.h"
 
 
@@ -68,7 +69,7 @@ void UHttpConnectComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 void UHttpConnectComponent::MakeRequest(const FString& Keyword)
 {
 	const TSharedRef<IHttpRequest, ESPMode::ThreadSafe> Request = FHttpModule::Get().CreateRequest();
-	const FString QueryUrl = RequestURL + Keyword;
+	const FString QueryUrl = RequestURL + FGenericPlatformHttp::UrlEncode(Keyword);
 	UE_LOG(LogTemp, Log, TEXT("QueryURl %s"), * QueryUrl);
 	Request->SetURL(QueryUrl);
 	Request->SetVerb("GET");
