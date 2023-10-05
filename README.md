@@ -23,5 +23,11 @@ Call the function with keywords
 This is an Async event. That means that when the process is completed you get an array with all models that matchs the query keywords
 ![image](https://github.com/AndresPiola/ScribbleAINauts/assets/67182081/feab0137-119b-4400-a83b-7e99f4a1a990)
 
+The result is a glb file that is imported using gltf plugin
+
+![image](https://github.com/AndresPiola/ScribbleAINauts/assets/67182081/d1e1cf73-dd72-474f-8556-6bc9dceab567)
+
+https://github.com/rdeioris/glTFRuntime
+
 
 
